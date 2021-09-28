@@ -1,0 +1,54 @@
+<div class="container">
+  <p>LISTA DE PELICULAS</p>
+
+  <button routerLink="/add" type="button" class="btn btn-success">
+    Agregar
+  </button>
+
+  <table class="table table-bordered border-success">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre pelicula</th>
+        <th scope="col">Año</th>
+        <th scope="col">Tiempo</th>
+        <th scope="col">Idioma</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Pais</th>
+
+        <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of ListarMovie">
+        <th>{{ movie.mov_id }}</th>
+        <td>{{ movie.mov_title }}</td>
+        <td>{{ movie.mov_year }}</td>
+        <td>{{ movie.mov_time }}</td>
+        <th>{{ movie.mov_lang }}</th>
+        <td>{{ movie.mov_dt_rel }}</td>
+        <th>{{ movie.mov_rel_country }}</th>
+
+        <td>
+          <button
+            (click)="editar(movie.mov_id)"
+            type="button"
+            class="btn btn-warning"
+          >
+            Editar
+          </button>
+        </td>
+        <td>
+          <button
+            (click)="eliminar(movie.mov_id)"
+            type="button"
+            class="btn btn-danger"
+          >
+            Eliminar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

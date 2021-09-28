@@ -1,0 +1,90 @@
+<div class="container">
+  <p>MODIFICAR PELICULA</p>
+  <div class="row">
+    <div class="col-sm-6">
+      <form>
+        <div class="mb3">
+          <label class="form-label"> Nombre de la pelicula</label>
+          <input
+            [(ngModel)]="movie.mov_title"
+            type="text"
+            class="form-control"
+            name="name"
+          />
+        </div>
+
+        <div class="mb3">
+          <label class="form-label"> Año</label>
+          <input
+            [(ngModel)]="movie.mov_year"
+            type="text"
+            class="form-control"
+            name="year"
+          />
+        </div>
+
+        <label class="form-label"> Tiempo</label>
+        <input
+          [(ngModel)]="movie.mov_time"
+          type="text"
+          class="form-control"
+          name="time"
+        />
+
+        <label class="form-label"> Idioma </label>
+        <input
+          [(ngModel)]="movie.mov_lang"
+          type="text"
+          class="form-control"
+          name="lang"
+        />
+        <label class="form-label"> Fecha estreno </label>
+        <input
+          [(ngModel)]="movie.mov_dt_rel"
+          type="text"
+          class="form-control"
+          name="date"
+        />
+        <label class="form-label"> Pais </label>
+        <input
+          [(ngModel)]="movie.mov_rel_country"
+          type="text"
+          class="form-control"
+          name="country"
+        />
+        <button (click)="modify()" class="btn btn-primary">
+          Guardar pelicula
+        </button>
+      </form>
+    </div>
+
+    <!-- In this part we show the data-->
+
+    <div class="col-sm-6">
+      <form>
+        <div class="mb3">
+          <label class="form-label">{{ movie.mov_title }}</label>
+        </div>
+
+        <div class="mb3">
+          <label class="form-label">{{ movie.mov_year }}</label>
+        </div>
+
+        <div class="mb3">
+          <label class="form-label"> {{ movie.mov_time }}</label>
+        </div>
+
+        <div class="mb3">
+          <label class="form-label"> {{ movie.mov_lang }} </label>
+        </div>
+        <div class="mb3">
+          <label class="form-label"> {{ movie.mov_dt_rel }} </label>
+        </div>
+
+        <div class="mb3">
+          <label class="form-label">{{ movie.mov_rel_country }} </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
